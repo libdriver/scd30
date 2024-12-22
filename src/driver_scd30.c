@@ -133,8 +133,8 @@ static const uint8_t gs_crc_table_lo[] =
 
 /**
  * @brief     generate the crc16
- * @param[in] *data points to a data buffer
- * @param[in] count is the data length
+ * @param[in] *data pointer to a data buffer
+ * @param[in] count data length
  * @return    crc
  * @note      none
  */
@@ -156,8 +156,8 @@ static uint16_t a_scd30_generate_crc16(uint8_t *data, uint16_t count)
 
 /**
  * @brief     generate the crc8
- * @param[in] *data points to a data buffer
- * @param[in] count is the data length
+ * @param[in] *data pointer to a data buffer
+ * @param[in] count data length
  * @return    crc
  * @note      none
  */
@@ -188,11 +188,11 @@ static uint8_t a_scd30_generate_crc8(uint8_t *data, uint8_t count)
 
 /**
  * @brief      read bytes
- * @param[in]  *handle points to an scd30 handle structure
- * @param[in]  reg is the iic register address
- * @param[out] *data points to a data buffer
- * @param[in]  len is the data length
- * @param[in]  delay_ms is the delay time in ms
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[in]  reg iic register address
+ * @param[out] *data pointer to a data buffer
+ * @param[in]  len data length
+ * @param[in]  delay_ms delay time in ms
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -219,11 +219,11 @@ static uint8_t a_scd30_iic_read(scd30_handle_t *handle, uint16_t reg, uint8_t *d
 
 /**
  * @brief     write bytes
- * @param[in] *handle points to an scd30 handle structure
- * @param[in] reg is the iic register address
- * @param[in] *data points to a data buffer
- * @param[in] len is the data length
- * @param[in] delay_ms is the delay time in ms
+ * @param[in] *handle pointer to an scd30 handle structure
+ * @param[in] reg iic register address
+ * @param[in] *data pointer to a data buffer
+ * @param[in] len data length
+ * @param[in] delay_ms delay time in ms
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -251,12 +251,12 @@ static uint8_t a_scd30_iic_write(scd30_handle_t *handle, uint16_t reg, uint8_t *
 
 /**
  * @brief      write read bytes
- * @param[in]  *handle points to an scd30 handle structure
- * @param[in]  *input points to an input buffer
- * @param[in]  in_len is the input length
- * @param[in]  delay_ms is the delay time in ms
- * @param[out] *output points to an output buffer
- * @param[in]  out_len is the output length
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[in]  *input pointer to an input buffer
+ * @param[in]  in_len input length
+ * @param[in]  delay_ms delay time in ms
+ * @param[out] *output pointer to an output buffer
+ * @param[in]  out_len output length
  * @return     status code
  *             - 0 success
  *             - 1 write read failed
@@ -287,8 +287,8 @@ static uint8_t a_scd30_uart_write_read(scd30_handle_t *handle, uint8_t *input, u
 
 /**
  * @brief      get data ready status
- * @param[in]  *handle points to an scd30 handle structure
- * @param[out] *status points to a status buffer
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[out] *status pointer to a status buffer
  * @return     status code
  *             - 0 success
  *             - 1 get data ready status failed
@@ -373,8 +373,8 @@ static uint8_t a_scd30_get_data_ready_status(scd30_handle_t *handle, uint16_t *s
 
 /**
  * @brief     set the chip interface
- * @param[in] *handle points to an scd30 handle structure
- * @param[in] interface is the chip interface
+ * @param[in] *handle pointer to an scd30 handle structure
+ * @param[in] interface chip interface
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -394,8 +394,8 @@ uint8_t scd30_set_interface(scd30_handle_t *handle, scd30_interface_t interface)
 
 /**
  * @brief      get the chip interface
- * @param[in]  *handle points to an scd30 handle structure
- * @param[out] *interface points to a chip interface buffer
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[out] *interface pointer to a chip interface buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -415,8 +415,8 @@ uint8_t scd30_get_interface(scd30_handle_t *handle, scd30_interface_t *interface
 
 /**
  * @brief     start the measurement with pressure compensation
- * @param[in] *handle points to an scd30 handle structure
- * @param[in] mbar is the ambient pressure compensation
+ * @param[in] *handle pointer to an scd30 handle structure
+ * @param[in] mbar ambient pressure compensation
  * @return    status code
  *            - 0 success
  *            - 1 start measurement failed
@@ -502,7 +502,7 @@ uint8_t scd30_start_measurement_with_pressure_compensation(scd30_handle_t *handl
 
 /**
  * @brief     start the measurement
- * @param[in] *handle points to an scd30 handle structure
+ * @param[in] *handle pointer to an scd30 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 start measurement failed
@@ -581,7 +581,7 @@ uint8_t scd30_start_measurement(scd30_handle_t *handle)
 
 /**
  * @brief     stop the measurement
- * @param[in] *handle points to an scd30 handle structure
+ * @param[in] *handle pointer to an scd30 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 stop measurement failed
@@ -655,8 +655,8 @@ uint8_t scd30_stop_measurement(scd30_handle_t *handle)
 
 /**
  * @brief     set the measurement interval
- * @param[in] *handle points to an scd30 handle structure
- * @param[in] second is the set interval
+ * @param[in] *handle pointer to an scd30 handle structure
+ * @param[in] second set interval
  * @return    status code
  *            - 0 success
  *            - 1 set measurement interval failed
@@ -742,8 +742,8 @@ uint8_t scd30_set_measurement_interval(scd30_handle_t *handle, uint16_t second)
 
 /**
  * @brief      get the measurement interval
- * @param[in]  *handle points to an scd30 handle structure
- * @param[out] *second points to a second buffer
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[out] *second pointer to a second buffer
  * @return     status code
  *             - 0 success
  *             - 1 get measurement interval failed
@@ -839,8 +839,8 @@ uint8_t scd30_get_measurement_interval(scd30_handle_t *handle, uint16_t *second)
 
 /**
  * @brief      get data ready status
- * @param[in]  *handle points to an scd30 handle structure
- * @param[out] *status points to a status buffer
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[out] *status pointer to a status buffer
  * @return     status code
  *             - 0 success
  *             - 1 get data ready status failed
@@ -936,8 +936,8 @@ uint8_t scd30_get_data_ready_status(scd30_handle_t *handle, uint16_t *status)
 
 /**
  * @brief     set automatic self calibration
- * @param[in] *handle points to an scd30 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an scd30 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set automatic self calibration failed
@@ -1016,8 +1016,8 @@ uint8_t scd30_set_automatic_self_calibration(scd30_handle_t *handle, scd30_bool_
 
 /**
  * @brief      get automatic self calibration
- * @param[in]  *handle points to an scd30 handle structure
- * @param[out] *enable points to a bool buffer
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[out] *enable pointer to a bool buffer
  * @return     status code
  *             - 0 success
  *             - 1 get automatic self calibration failed
@@ -1113,8 +1113,8 @@ uint8_t scd30_get_automatic_self_calibration(scd30_handle_t *handle, scd30_bool_
 
 /**
  * @brief     set forced recalibration
- * @param[in] *handle points to an scd30 handle structure
- * @param[in] co2_ppm is the set co2 ppm
+ * @param[in] *handle pointer to an scd30 handle structure
+ * @param[in] co2_ppm set co2 ppm
  * @return    status code
  *            - 0 success
  *            - 1 set forced recalibration failed
@@ -1200,8 +1200,8 @@ uint8_t scd30_set_forced_recalibration(scd30_handle_t *handle, uint16_t co2_ppm)
 
 /**
  * @brief      get forced recalibration
- * @param[in]  *handle points to an scd30 handle structure
- * @param[out] *co2_ppm points to a co2 ppm buffer
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[out] *co2_ppm pointer to a co2 ppm buffer
  * @return     status code
  *             - 0 success
  *             - 1 get forced recalibration failed
@@ -1297,8 +1297,8 @@ uint8_t scd30_get_forced_recalibration(scd30_handle_t *handle, uint16_t *co2_ppm
 
 /**
  * @brief     set temperature offset
- * @param[in] *handle points to an scd30 handle structure
- * @param[in] deg is the set degree
+ * @param[in] *handle pointer to an scd30 handle structure
+ * @param[in] deg set degree
  * @return    status code
  *            - 0 success
  *            - 1 set temperature offset failed
@@ -1377,8 +1377,8 @@ uint8_t scd30_set_temperature_offset(scd30_handle_t *handle, uint16_t deg)
 
 /**
  * @brief      get temperature offset
- * @param[in]  *handle points to an scd30 handle structure
- * @param[out] *deg points to a degree buffer
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[out] *deg pointer to a degree buffer
  * @return     status code
  *             - 0 success
  *             - 1 get temperature offset failed
@@ -1474,9 +1474,9 @@ uint8_t scd30_get_temperature_offset(scd30_handle_t *handle, uint16_t *deg)
 
 /**
  * @brief      convert the temperature offset to the register raw data
- * @param[in]  *handle points to an scd30 handle structure
- * @param[in]  deg is the degree
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[in]  deg degree
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -1501,9 +1501,9 @@ uint8_t scd30_temperature_offset_convert_to_register(scd30_handle_t *handle, flo
 
 /**
  * @brief      convert the register raw data to the temperature offset
- * @param[in]  *handle points to an scd30 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *deg points to a degree buffer
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *deg pointer to a degree buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -1528,8 +1528,8 @@ uint8_t scd30_temperature_offset_convert_to_data(scd30_handle_t *handle, uint16_
 
 /**
  * @brief     set altitude compensation
- * @param[in] *handle points to an scd30 handle structure
- * @param[in] m is the set meter
+ * @param[in] *handle pointer to an scd30 handle structure
+ * @param[in] m set meter
  * @return    status code
  *            - 0 success
  *            - 1 set altitude compensation failed
@@ -1608,8 +1608,8 @@ uint8_t scd30_set_altitude_compensation(scd30_handle_t *handle, uint16_t m)
 
 /**
  * @brief      get altitude compensation
- * @param[in]  *handle points to an scd30 handle structure
- * @param[out] *m points to a meter buffer
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[out] *m pointer to a meter buffer
  * @return     status code
  *             - 0 success
  *             - 1 get altitude compensation failed
@@ -1705,8 +1705,8 @@ uint8_t scd30_get_altitude_compensation(scd30_handle_t *handle, uint16_t *m)
 
 /**
  * @brief      get firmware version
- * @param[in]  *handle points to an scd30 handle structure
- * @param[out] *version points to a version buffer
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[out] *version pointer to a version buffer
  * @return     status code
  *             - 0 success
  *             - 1 get firmware version failed
@@ -1802,7 +1802,7 @@ uint8_t scd30_get_firmware_version(scd30_handle_t *handle, uint16_t *version)
 
 /**
  * @brief     soft reset
- * @param[in] *handle points to an scd30 handle structure
+ * @param[in] *handle pointer to an scd30 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 soft reset failed
@@ -1877,8 +1877,8 @@ uint8_t scd30_soft_reset(scd30_handle_t *handle)
 
 /**
  * @brief      read the result
- * @param[in]  *handle points to an scd30 handle structure
- * @param[out] *data points to an scd30 data structure
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[out] *data pointer to an scd30 data structure
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -2058,7 +2058,7 @@ uint8_t scd30_read(scd30_handle_t *handle, scd30_data_t *data)
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an scd30 handle structure
+ * @param[in] *handle pointer to an scd30 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic or uart initialization failed
@@ -2208,7 +2208,7 @@ uint8_t scd30_init(scd30_handle_t *handle)
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an scd30 handle structure
+ * @param[in] *handle pointer to an scd30 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic or uart deinit failed
@@ -2298,11 +2298,11 @@ uint8_t scd30_deinit(scd30_handle_t *handle)
 
 /**
  * @brief      set and get the chip register with uart interface
- * @param[in]  *handle points to an scd30 handle structure
- * @param[in]  *input points to an input buffer
- * @param[in]  in_len is the input length
- * @param[out] *output points to an output buffer
- * @param[in]  out_len is the output length
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[in]  *input pointer to an input buffer
+ * @param[in]  in_len input length
+ * @param[out] *output pointer to an output buffer
+ * @param[in]  out_len output length
  * @return     status code
  *             - 0 success
  *             - 1 write read failed
@@ -2333,10 +2333,10 @@ uint8_t scd30_set_get_reg_uart(scd30_handle_t *handle, uint8_t *input, uint16_t 
 
 /**
  * @brief     set the chip register with iic interface
- * @param[in] *handle points to an scd30 handle structure
- * @param[in] reg is the iic register address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data buffer length
+ * @param[in] *handle pointer to an scd30 handle structure
+ * @param[in] reg iic register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data buffer length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -2369,10 +2369,10 @@ uint8_t scd30_set_reg_iic(scd30_handle_t *handle, uint16_t reg, uint8_t *buf, ui
 
 /**
  * @brief      get the chip register with iic interface
- * @param[in]  *handle points to an scd30 handle structure
- * @param[in]  reg is the iic register address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data buffer length
+ * @param[in]  *handle pointer to an scd30 handle structure
+ * @param[in]  reg iic register address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len data buffer length
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -2405,7 +2405,7 @@ uint8_t scd30_get_reg_iic(scd30_handle_t *handle, uint16_t reg, uint8_t *buf, ui
 
 /**
  * @brief      get chip information
- * @param[out] *info points to an scd30 info structure
+ * @param[out] *info pointer to an scd30 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL

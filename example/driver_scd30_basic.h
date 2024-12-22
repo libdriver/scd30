@@ -58,8 +58,8 @@ extern "C"{
 
 /**
  * @brief     basic example init
- * @param[in] interface is the chip interface
- * @param[in] mbar is the pressure compensation
+ * @param[in] interface chip interface
+ * @param[in] mbar pressure compensation
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -78,7 +78,7 @@ uint8_t scd30_basic_deinit(void);
 
 /**
  * @brief      basic example read
- * @param[out] *data points to a scd30_data_t structure
+ * @param[out] *data pointer to a scd30_data_t structure
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -97,8 +97,8 @@ uint8_t scd30_basic_reset(void);
 
 /**
  * @brief      basic example get the version
- * @param[out] *major points to a major buffer
- * @param[out] *minor points to a minor buffer
+ * @param[out] *major pointer to a major buffer
+ * @param[out] *minor pointer to a minor buffer
  * @return     status code
  *             - 0 success
  *             - 1 get version failed
