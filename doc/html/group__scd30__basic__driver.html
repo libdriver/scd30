@@ -329,7 +329,7 @@ Functions</h2></td></tr>
 <p>close the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -376,8 +376,8 @@ Functions</h2></td></tr>
 <p>get altitude compensation </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*m</td><td>points to a meter buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*m</td><td>pointer to a meter buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -423,8 +423,8 @@ Functions</h2></td></tr>
 <p>get automatic self calibration </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -470,8 +470,8 @@ Functions</h2></td></tr>
 <p>get data ready status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*status</td><td>points to a status buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*status</td><td>pointer to a status buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -517,8 +517,8 @@ Functions</h2></td></tr>
 <p>get firmware version </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*version</td><td>points to a version buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*version</td><td>pointer to a version buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -564,8 +564,8 @@ Functions</h2></td></tr>
 <p>get forced recalibration </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*co2_ppm</td><td>points to a co2 ppm buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*co2_ppm</td><td>pointer to a co2 ppm buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -611,8 +611,8 @@ Functions</h2></td></tr>
 <p>get the chip interface </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*interface</td><td>points to a chip interface buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*interface</td><td>pointer to a chip interface buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -656,8 +656,8 @@ Functions</h2></td></tr>
 <p>get the measurement interval </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*second</td><td>points to a second buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*second</td><td>pointer to a second buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -703,8 +703,8 @@ Functions</h2></td></tr>
 <p>get temperature offset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*deg</td><td>points to a degree buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*deg</td><td>pointer to a degree buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -740,7 +740,7 @@ Functions</h2></td></tr>
 <p>get chip information </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>points to an scd30 info structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>pointer to an scd30 info structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -774,7 +774,7 @@ Functions</h2></td></tr>
 <p>initialize the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -821,8 +821,8 @@ Functions</h2></td></tr>
 <p>read the result </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>points to an scd30 data structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>pointer to an scd30 data structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -869,8 +869,8 @@ Functions</h2></td></tr>
 <p>set altitude compensation </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>is the set meter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>set meter </td></tr>
   </table>
   </dd>
 </dl>
@@ -916,8 +916,8 @@ Functions</h2></td></tr>
 <p>set automatic self calibration </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -963,8 +963,8 @@ Functions</h2></td></tr>
 <p>set forced recalibration </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">co2_ppm</td><td>is the set co2 ppm </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">co2_ppm</td><td>set co2 ppm </td></tr>
   </table>
   </dd>
 </dl>
@@ -1011,8 +1011,8 @@ Functions</h2></td></tr>
 <p>set the chip interface </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">interface</td><td>is the chip interface </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">interface</td><td>chip interface </td></tr>
   </table>
   </dd>
 </dl>
@@ -1056,8 +1056,8 @@ Functions</h2></td></tr>
 <p>set the measurement interval </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>is the set interval </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">second</td><td>set interval </td></tr>
   </table>
   </dd>
 </dl>
@@ -1104,8 +1104,8 @@ Functions</h2></td></tr>
 <p>set temperature offset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">deg</td><td>is the set degree </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">deg</td><td>set degree </td></tr>
   </table>
   </dd>
 </dl>
@@ -1141,7 +1141,7 @@ Functions</h2></td></tr>
 <p>soft reset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1177,7 +1177,7 @@ Functions</h2></td></tr>
 <p>start the measurement </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1223,8 +1223,8 @@ Functions</h2></td></tr>
 <p>start the measurement with pressure compensation </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mbar</td><td>is the ambient pressure compensation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mbar</td><td>ambient pressure compensation </td></tr>
   </table>
   </dd>
 </dl>
@@ -1261,7 +1261,7 @@ Functions</h2></td></tr>
 <p>stop the measurement </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1313,9 +1313,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the temperature offset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*deg</td><td>points to a degree buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*deg</td><td>pointer to a degree buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1366,9 +1366,9 @@ Functions</h2></td></tr>
 <p>convert the temperature offset to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd30 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">deg</td><td>is the degree </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd30 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">deg</td><td>degree </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
