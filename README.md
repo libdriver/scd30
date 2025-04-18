@@ -10,7 +10,7 @@
 
 CMOSens® Technology for IR detection enables carbon dioxide measurements of the highest accuracy at a competitive price.Along with the NDIR measurement technology for detecting CO2 comes a best-in-class Sensirion humidity and temperature sensor integrated on the very same sensor module. Ambient humidity and temperature can be measured by Sensirion’s algorithm expertise through modelling and compensating of external heat sources without the need of any additional components. The very small module height allows easy integration into different applications. Carbon Dioxide is a key indicator for indoor air quality. Thanks to new energy standards and better insulation, houses have become increasingly energy-efficient, but the air quality can deteriorate rapidly. Active ventilation is needed to maintain a comfortable and healthy indoor environment and improve the well-being and productivity of the inhabitants. Sensirion sensor solutions offer an accurate and stable monitoring of CO2 in the air, as well as temperature and humidity. This enables our customers to develop new solutions that increase energy efficiency and simultaneously support the well-being of everyone.
 
-LibDriver SCD30 is the full function driver of SCD30 launched by LibDriver. It provides CO2 reading, temperature reading, humidity reading and other functions. LibDriver is MISRA compliant.
+LibDriver SCD30 is a full-featured driver of SCD30 launched by LibDriver. It provides CO2 reading, temperature reading, humidity reading and other functions. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
