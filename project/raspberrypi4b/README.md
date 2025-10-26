@@ -117,13 +117,13 @@ find_package(scd30 REQUIRED)
    scd30 (-e read | --example=read) [--interface=<iic | uart>] [--times=<num>]
    ```
 
-10. Run scd30 basic get version function.  
+7. Run scd30 basic get version function.  
 
     ```shell
     scd30 (-e version | --example=version) [--interface=<iic | uart>]
     ```
 
-11. Run scd30 basic reset function.  
+8. Run scd30 basic reset function.  
 
     ```shell
     scd30 (-e reset | --example=reset) [--interface=<iic | uart>]
