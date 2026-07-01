@@ -102,8 +102,8 @@ scd30: driver version is 1.0.
 scd30: min supply voltage is 3.3V.
 scd30: max supply voltage is 5.5V.
 scd30: max current is 75.00mA.
-scd30: max temperature is 70.0C.
-scd30: min temperature is -40.0C.
+scd30: max temperature is 50.0C.
+scd30: min temperature is 0.0C.
 ```
 
 ```shell

@@ -99,11 +99,11 @@ typedef struct scd30_handle_s
  */
 typedef struct scd30_data_s
 {
-    uint16_t co2_raw;                /**< co2 raw */
+    uint32_t co2_raw;                /**< co2 raw */
     float co2_ppm;                   /**< co2 in ppm */
-    uint16_t temperature_raw;        /**< temperature raw */
+    uint32_t temperature_raw;        /**< temperature raw */
     float temperature_deg;           /**< temperature in degree */
-    uint16_t humidity_raw;           /**< humidity raw */
+    uint32_t humidity_raw;           /**< humidity raw */
     float humidity_percent;          /**< humidity in percent */
 } scd30_data_t;
 
@@ -323,7 +323,7 @@ uint8_t scd30_read(scd30_handle_t *handle, scd30_data_t *data);
  *            - 2 handle is NULL
  *            - 3 handle is not initialized
  *            - 4 mbar is invalid
- * @note      700 <= mbar <= 1400
+ * @note      700 <= mbar <= 1400 or 0
  */
 uint8_t scd30_start_measurement_with_pressure_compensation(scd30_handle_t *handle, uint16_t mbar);
 

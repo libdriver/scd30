@@ -44,8 +44,8 @@
 #define SUPPLY_VOLTAGE_MIN        3.3f                     /**< chip min supply voltage */
 #define SUPPLY_VOLTAGE_MAX        5.5f                     /**< chip max supply voltage */
 #define MAX_CURRENT               75.0f                    /**< chip max current */
-#define TEMPERATURE_MIN           -40.0f                   /**< chip min operating temperature */
-#define TEMPERATURE_MAX           70.0f                    /**< chip max operating temperature */
+#define TEMPERATURE_MIN           0.0f                     /**< chip min operating temperature */
+#define TEMPERATURE_MAX           50.0f                    /**< chip max operating temperature */
 #define DRIVER_VERSION            1000                     /**< driver version */
 
 /**
@@ -423,7 +423,7 @@ uint8_t scd30_get_interface(scd30_handle_t *handle, scd30_interface_t *interface
  *            - 2 handle is NULL
  *            - 3 handle is not initialized
  *            - 4 mbar is invalid
- * @note      700 <= mbar <= 1400
+ * @note      700 <= mbar <= 1400 or 0
  */
 uint8_t scd30_start_measurement_with_pressure_compensation(scd30_handle_t *handle, uint16_t mbar)
 {
@@ -437,7 +437,7 @@ uint8_t scd30_start_measurement_with_pressure_compensation(scd30_handle_t *handl
     {
         return 3;                                                                                                   /* return error */
     }
-    if ((mbar < 700) || (mbar > 1400))                                                                              /* check mbar range */
+    if ((mbar != 0) && (mbar < 700 || mbar > 1400))                                                                 /* check mbar range */
     {
         handle->debug_print("scd30: mbar is invalid.\n");                                                           /* mbar is invalid */
        
@@ -1494,7 +1494,7 @@ uint8_t scd30_temperature_offset_convert_to_register(scd30_handle_t *handle, flo
         return 3;                         /* return error */
     }
     
-    *reg = (uint8_t)(deg * 100.0f);       /* convert real data to register data */
+    *reg = (uint16_t)(deg * 100.0f);      /* convert real data to register data */
     
     return 0;                             /* success return 0 */
 }
@@ -1942,7 +1942,7 @@ uint8_t scd30_read(scd30_handle_t *handle, scd30_data_t *data)
         input_buf[2] = (SCD30_UART_ADDRESS_READ_MEASUREMENT >> 8) & 0xFF;                                           /* set addr msb */
         input_buf[3] = (SCD30_UART_ADDRESS_READ_MEASUREMENT >> 0) & 0xFF;                                           /* set addr lsb */
         input_buf[4] = 0x00;                                                                                        /* set 0x00 */
-        input_buf[5] = 0x06;                                                                                        /* set 0x01 */
+        input_buf[5] = 0x06;                                                                                        /* set 0x06 */
         crc16 = a_scd30_generate_crc16(input_buf, 6);                                                               /* get crc16 */
         input_buf[6] = (crc16 >> 0) & 0xFF;                                                                         /* set crc lsb */
         input_buf[7] = (crc16 >> 8) & 0xFF;                                                                         /* set crc mss */
